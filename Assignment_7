@@ -1,0 +1,108 @@
+<script type="text/javascript">
+<!--
+var gestName,famSide,giftType;
+//counters
+var groomCount = 0;
+var brideCount = 0;
+var toasterCount = 0;
+var silverwareCounter = 0;
+var stemwareCounter = 0;
+//accumulators
+var groomAccum = "";
+var brideAccum = "";
+var toasterAccum = "";
+var sliverwareAccum = "";
+var stemwareAccum = "";
+//initalize the error flag
+var errorFlag = 0;
+//initalize the loop
+var anotherGest = "yes"
+while(anotherGest == "yes")
+{//start loop
+gestName = prompt("What is the gets name:", "");
+famSide = prompt("What side is the gest with: (groom/bride)", "");
+switch(famSide)
+{//start switch
+  case "groom":
+	  groomCount = groomCount + 1;
+		if (groomCount == 1)
+		{
+		  groomAccum = "Grom's Side:<br>" + groomCount + ". " + gestName;
+		}
+		else
+		{
+		  groomAccum = groomAccum + "<br>" + groomCount + ". " + gestName;
+		}
+		// alert(groomAccum)
+  break;
+  case "bride":
+	  brideCount = brideCount + 1;
+		if (brideCount == 1)
+		{
+		  brideAccum = "Bride's Side:<br>" + brideCount + ". " + gestName;
+    }
+		else
+		{
+		  brideAccum = brideAccum + "<br>" + brideCount + ". " + gestName;
+		}
+	break;
+	default:
+	  alert("You typed " + famSide + " you nneded to type groom or bride");
+  break;
+}//end switch
+
+giftType = prompt("What tpye of gift did thay bring: ", "");
+switch(giftType)
+{//start switch
+  case"toaster":
+		toasterCount = toasterCount + 1;
+		if (toasterCount = 1)
+		{
+		  toasterAccum = "Toster:<br>" + toasterCount + ". " + gestName;
+		}
+		else
+		{
+		  toasterAccum = toasterAccum + "<br>" + toasterCount + ". " + gestName;
+		}
+	break;
+	case"silverware":
+    silverwareCounter = silverwareCounter + 1;
+		if (silverwareCounter = 1)
+		{
+		  sliverwareAccum = "Sliverware:<br>" + silverwareCounter + ". " + gestName;
+		}
+		else
+		{
+		  sliverwareAccum = sliverwareAccum + "<br>" + silverwareCounter + ". " + gestName;
+	  }
+  break;
+	case"stemware":
+	  stemwareCounter = stemwareCounter + 1;
+		if (stemwareCounter = 1)
+		{
+		  stemwareAccum = "Stemware:<br>" + stemwareCounter + ". " + gestName;
+		}
+		else
+		{
+		  stemwareAccum = stemwareAccum + "<br>" + stemwareCounter + ". " + gestName;
+		}
+	break;
+}//end switch
+if(errorFlag == 0)
+{
+  anotherGest = prompt("Is there a nother gest:(yes/no)", "");
+}
+else
+{
+  anotherGest = "yes";
+	errorFlag = 0;
+}
+
+}//end loop
+document.write(groomAccum);
+document.write(brideAccum);
+document.write(toasterAccum);
+document.write(sliverwareAccum);
+document.write(stemwareAccum);	
+// -->
+</script>
